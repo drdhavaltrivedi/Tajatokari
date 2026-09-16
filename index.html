@@ -1,0 +1,3534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#0e5a2b" />
+  <meta name="description" content="Tajatokari delivers 100% organic, chemical-free, farm-sourced ready-to-cook chopped vegetables across Ahmedabad." />
+  <title>Tajatokari | 100% Organic Ready-to-Cook Vegetables & Farm Packages</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/tajatokari_logo.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --green-primary: #0e5a2b;
+      --green-deep: #073c1c;
+      --green-light: #eef7ec;
+      --green-accent: #2e7d32;
+      --orange-brand: #ff5722;
+      --orange-hover: #e64a19;
+      --yellow-tag: #ffb74d;
+      --cream-bg: #f8faf7;
+      --card-bg: #ffffff;
+      --text-main: #132c1b;
+      --text-muted: #5c7060;
+      --border-color: #e1ebd9;
+      --border-focus: #0e5a2b;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --shadow-sm: 0 4px 12px rgba(14, 90, 43, 0.05);
+      --shadow-md: 0 10px 30px rgba(14, 90, 43, 0.08);
+      --shadow-hover: 0 16px 36px rgba(14, 90, 43, 0.14);
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      background: var(--cream-bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: 75px; /* space for mobile bottom bar */
+    }
+
+    @media (min-width: 769px) {
+      body { padding-bottom: 0; }
+    }
+
+    h1, h2, h3, h4, .brand-font {
+      font-family: 'Outfit', sans-serif;
+      color: var(--green-deep);
+      margin: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font-family: inherit; }
+    button { cursor: pointer; border: 0; background: none; }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .svg-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+    }
+
+    /* Top Announcement Bar */
+    .topbar {
+      background: var(--green-deep);
+      color: #d2e8cf;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 9px 16px;
+      letter-spacing: 0.2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .topbar span.highlight {
+      color: var(--yellow-tag);
+      font-weight: 700;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      transition: var(--transition);
+    }
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 14px rgba(14, 90, 43, 0.25));
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .logo:hover .logo-img {
+      transform: scale(1.12) rotate(-5deg);
+    }
+    .logo-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.9px;
+      line-height: 1;
+      color: var(--green-primary);
+    }
+    .logo-title span { color: var(--orange-brand); }
+    .logo-sub {
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .nav-links a {
+      color: var(--text-main);
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-links a:hover { color: var(--green-primary); }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green-primary);
+      transition: var(--transition);
+    }
+    .nav-links a:hover:after { width: 100%; }
+
+    .cart-btn {
+      background: var(--orange-brand);
+      color: white;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 20px rgba(255, 87, 34, 0.3);
+      transition: var(--transition);
+    }
+    .cart-btn:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 87, 34, 0.4);
+    }
+    .cart-badge {
+      background: white;
+      color: var(--orange-brand);
+      border-radius: 50%;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .cart-badge.bounce {
+      animation: pulseBadge 0.4s ease;
+    }
+    @keyframes pulseBadge {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.35); }
+      100% { transform: scale(1); }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #eef7ec 0%, #fbfdf9 50%, #fff8ec 100%);
+      padding: 48px 0 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      align-items: center;
+      gap: 40px;
+    }
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(14, 90, 43, 0.08);
+      color: var(--green-primary);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(38px, 4.8vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      color: var(--orange-brand);
+      font-style: normal;
+      position: relative;
+      display: inline-block;
+    }
+    .hero-copy {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 480px;
+      margin-bottom: 26px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 15px;
+      transition: var(--transition);
+    }
+    .btn-primary {
+      background: var(--green-primary);
+      color: white;
+      box-shadow: 0 8px 20px rgba(14, 90, 43, 0.25);
+    }
+    .btn-primary:hover {
+      background: var(--green-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(14, 90, 43, 0.35);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--green-primary);
+      border: 1.5px solid #cce0c9;
+    }
+    .btn-secondary:hover {
+      background: var(--green-light);
+      border-color: var(--green-primary);
+    }
+    .trust-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .trust-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(14, 90, 43, 0.12);
+    }
+    .trust-pill-check {
+      color: var(--green-primary);
+    }
+
+    .hero-media {
+      position: relative;
+    }
+    .hero-img-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      background: white;
+      border: 4px solid white;
+    }
+    .hero-img-box img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: var(--transition);
+    }
+    .hero-img-box:hover img {
+      transform: scale(1.02);
+    }
+    .hero-badge-float {
+      position: absolute;
+      bottom: -15px;
+      right: 20px;
+      background: white;
+      padding: 14px 20px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-hover);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-badge-icon-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .hero-badge-text strong {
+      display: block;
+      color: var(--green-deep);
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    .hero-badge-text small {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Features Ribbon */
+    .features-ribbon {
+      background: var(--green-primary);
+      color: white;
+      padding: 24px 0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .feature-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: var(--transition);
+    }
+    .feature-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
+    }
+    .feature-icon-box {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      flex-shrink: 0;
+    }
+    .feature-text strong {
+      display: block;
+      font-size: 14px;
+      color: white;
+      font-weight: 800;
+    }
+    .feature-text small {
+      color: #c0dec2;
+      font-size: 12px;
+    }
+
+    /* Family Packages Section */
+    .packages-section {
+      padding: 60px 0 20px;
+    }
+    .packages-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+    .packages-header h2 {
+      font-size: 38px;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+    .packages-header p {
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+    .pkg-card {
+      background: white;
+      border: 1.5px solid var(--border-color);
+      border-radius: 22px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .pkg-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: #bcdbc6;
+    }
+    .pkg-card.featured {
+      border: 2px solid var(--green-primary);
+      background: linear-gradient(180deg, #f4faf2 0%, #ffffff 100%);
+      box-shadow: 0 14px 38px rgba(14, 90, 43, 0.14);
+    }
+    .pkg-top-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green-primary);
+      color: white;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 5px 16px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      white-space: nowrap;
+    }
+    .pkg-card.featured .pkg-top-badge {
+      background: var(--orange-brand);
+    }
+    .pkg-img-wrap {
+      width: 100%;
+      height: 165px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: #f4faf2;
+    }
+    .pkg-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .pkg-card:hover .pkg-img-wrap img {
+      transform: scale(1.05);
+    }
+    .pkg-people-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(14, 90, 43, 0.08);
+      color: var(--green-primary);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .pkg-title {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--green-deep);
+      margin-bottom: 4px;
+    }
+    .pkg-sub {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .pkg-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    .pkg-price {
+      font-family: 'Outfit', sans-serif;
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--green-primary);
+      line-height: 1;
+    }
+    .pkg-price-unit {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .pkg-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 22px;
+      font-size: 13px;
+      color: var(--text-main);
+      line-height: 1.85;
+      flex: 1;
+    }
+    .pkg-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pkg-list li::before {
+      content: '✓';
+      color: var(--green-primary);
+      font-weight: 900;
+    }
+    .pkg-btn {
+      width: 100%;
+      background: var(--green-primary);
+      color: white;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 14px;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(14, 90, 43, 0.2);
+    }
+    .pkg-card.featured .pkg-btn {
+      background: var(--orange-brand);
+      box-shadow: 0 6px 18px rgba(255, 87, 34, 0.3);
+    }
+    .pkg-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(14, 90, 43, 0.3);
+    }
+    .pkg-card.featured .pkg-btn:hover {
+      background: var(--orange-hover);
+      box-shadow: 0 8px 24px rgba(255, 87, 34, 0.4);
+    }
+
+    /* Calculator Section */
+    .calculator-section {
+      padding: 40px 0;
+    }
+    .calc-box {
+      background: linear-gradient(135deg, var(--green-deep), #0c4d25);
+      color: white;
+      border-radius: 26px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+    .calc-box .eyebrow-badge {
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: #ffb74d !important;
+      border: 1px solid rgba(255, 183, 77, 0.4) !important;
+    }
+    .calc-box .eyebrow-badge svg {
+      stroke: #ffb74d !important;
+    }
+    .calc-info h2 {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .calc-info p {
+      color: #c5e3ca;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .calc-controls label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--yellow-tag);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .calc-range-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .calc-range-row input[type="range"] {
+      flex: 1;
+      accent-color: var(--orange-brand);
+      cursor: pointer;
+    }
+    .calc-range-val {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .result-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 20px 12px;
+      text-align: center;
+    }
+    .result-icon {
+      color: var(--yellow-tag);
+      margin-bottom: 8px;
+    }
+    .result-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--yellow-tag);
+      margin-bottom: 4px;
+    }
+    .result-label {
+      font-size: 11px;
+      color: #d0ebd5;
+      line-height: 1.3;
+    }
+
+    /* Custom Basket Creator Section */
+    .custom-basket-section {
+      padding: 60px 0;
+      background: linear-gradient(180deg, #ffffff 0%, #f4faf2 100%);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .custom-basket-box {
+      background: white;
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+    }
+    .basket-size-picker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 24px 0 30px;
+    }
+    .basket-size-card {
+      flex: 1;
+      min-width: 220px;
+      background: var(--cream-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 16px;
+      padding: 16px 20px;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .basket-size-card.active {
+      border-color: var(--green-primary);
+      background: var(--green-light);
+      box-shadow: 0 6px 18px rgba(14, 90, 43, 0.12);
+    }
+    .basket-size-card strong {
+      display: block;
+      font-size: 16px;
+      color: var(--green-deep);
+    }
+    .basket-size-card small {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    .basket-size-price {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--green-primary);
+    }
+
+    .veggie-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .veggie-picker-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: var(--transition);
+      user-select: none;
+    }
+    .veggie-picker-item:hover {
+      border-color: var(--green-accent);
+      transform: translateY(-2px);
+    }
+    .veggie-picker-item.selected {
+      border-color: var(--green-primary);
+      background: #f0f8ef;
+      box-shadow: 0 4px 12px rgba(14, 90, 43, 0.1);
+    }
+    .veggie-picker-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .veggie-picker-info strong {
+      display: block;
+      font-size: 13px;
+      color: var(--green-deep);
+      line-height: 1.2;
+    }
+    .veggie-picker-info small {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .veggie-check-icon {
+      margin-left: auto;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      display: grid;
+      place-items: center;
+      color: transparent;
+      transition: var(--transition);
+    }
+    .veggie-picker-item.selected .veggie-check-icon {
+      background: var(--green-primary);
+      border-color: var(--green-primary);
+      color: white;
+    }
+
+    .custom-basket-summary {
+      background: var(--green-deep);
+      color: white;
+      border-radius: 18px;
+      padding: 24px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .selected-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .chip-item {
+      background: rgba(255,255,255,0.18);
+      color: #e4f4e2;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* 10-Minute Meal Prep Recipes Section */
+    .recipes-section {
+      padding: 60px 0;
+    }
+    .recipes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .recipe-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+    .recipe-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: #c4dec1;
+    }
+    .recipe-img-box {
+      height: 170px;
+      position: relative;
+      overflow: hidden;
+    }
+    .recipe-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    .recipe-card:hover .recipe-img {
+      transform: scale(1.05);
+    }
+    .recipe-time-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(7, 60, 28, 0.88);
+      backdrop-filter: blur(4px);
+      color: var(--yellow-tag);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .recipe-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .recipe-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--green-deep);
+      margin-bottom: 6px;
+    }
+    .recipe-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .recipe-ingredients-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .ing-tag {
+      background: #eef7ec;
+      color: var(--green-primary);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 9px;
+      border-radius: 6px;
+    }
+    .recipe-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-color);
+    }
+    .recipe-price-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--green-primary);
+    }
+    .recipe-btn {
+      background: var(--green-primary);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 13px;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .recipe-btn:hover {
+      background: var(--green-deep);
+    }
+    .ideal-dish-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #fff3e0;
+      color: #e65100;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 60px 0;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .review-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .review-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 12px;
+    }
+    .review-text {
+      color: var(--text-main);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .reviewer-initial-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-light), #d8eed6);
+      color: var(--green-primary);
+      font-weight: 900;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-color);
+      flex-shrink: 0;
+    }
+    .reviewer strong {
+      display: block;
+      font-size: 14px;
+      color: var(--green-deep);
+    }
+    .reviewer small {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 40px 0 60px;
+    }
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 18px 22px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--green-deep);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: var(--transition);
+    }
+    .faq-question:hover { background: var(--green-light); }
+    .faq-toggle-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--cream-bg);
+      color: var(--green-primary);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 900;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.active .faq-toggle-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      background: #fafdf9;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 0 22px 18px;
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Floating WhatsApp Widget */
+    .floating-wa-widget {
+      position: fixed;
+      bottom: 85px;
+      right: 20px;
+      z-index: 95;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .wa-widget-tooltip {
+      background: white;
+      color: var(--green-deep);
+      padding: 8px 14px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      border: 1px solid var(--border-color);
+      display: none;
+      flex-direction: column;
+    }
+    @media (min-width: 769px) {
+      .wa-widget-tooltip { display: flex; }
+    }
+    .wa-widget-tooltip strong { font-size: 12px; }
+    .wa-widget-tooltip span { font-size: 10px; color: var(--text-muted); }
+
+    .wa-widget-btn {
+      width: 52px;
+      height: 52px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      position: relative;
+      transition: var(--transition);
+    }
+    .wa-widget-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.5);
+    }
+    .wa-online-dot {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 12px;
+      height: 12px;
+      background: #4caf50;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+
+    /* Coupon Box in Cart */
+    .coupon-box {
+      margin-top: 14px;
+      display: flex;
+      gap: 8px;
+    }
+    .coupon-input {
+      flex: 1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+    .coupon-apply-btn {
+      background: var(--green-primary);
+      color: white;
+      padding: 0 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .coupon-applied-tag {
+      display: none;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-top: 6px;
+    }
+
+    /* Shop Section */
+    section.shop-section {
+      padding: 60px 0;
+    }
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .section-header h2 {
+      font-size: 36px;
+      letter-spacing: -1px;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      margin-top: 6px;
+      font-size: 15px;
+    }
+
+    .search-wrapper {
+      position: relative;
+      min-width: 260px;
+    }
+    .search-input {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      background: white;
+      padding: 12px 40px 12px 16px;
+      font-size: 14px;
+      outline: none;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .search-input:focus {
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 3px rgba(14, 90, 43, 0.12);
+    }
+    .search-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+      font-size: 16px;
+    }
+
+    /* Categories Pills */
+    .categories-bar {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 30px;
+      scrollbar-width: none;
+    }
+    .categories-bar::-webkit-scrollbar { display: none; }
+
+    .cat-btn {
+      white-space: nowrap;
+      border: 1.5px solid var(--border-color);
+      background: white;
+      color: var(--text-muted);
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cat-btn:hover {
+      border-color: var(--green-primary);
+      color: var(--green-primary);
+      background: var(--green-light);
+    }
+    .cat-btn.active {
+      background: var(--green-primary);
+      color: white;
+      border-color: var(--green-primary);
+      box-shadow: 0 4px 14px rgba(14, 90, 43, 0.2);
+    }
+    .cat-count {
+      opacity: 0.8;
+      font-size: 11px;
+      background: rgba(0,0,0,0.08);
+      padding: 2px 7px;
+      border-radius: 999px;
+    }
+    .cat-btn.active .cat-count {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbdcc8;
+    }
+
+    .product-img-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #f4faf2;
+    }
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img {
+      transform: scale(1.08);
+    }
+    .tag-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--green-primary);
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: 6px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .freshness-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(4px);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--green-primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .product-content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--green-deep);
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+    .product-desc {
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      min-height: 34px;
+    }
+
+    .variant-label {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .variant-select {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: #fbfef9;
+      color: var(--text-main);
+      padding: 8px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      outline: none;
+      margin-bottom: 14px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .variant-select:focus {
+      border-color: var(--green-primary);
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-color);
+    }
+    .price-box {
+      display: flex;
+      flex-direction: column;
+    }
+    .price-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--green-primary);
+      line-height: 1;
+    }
+    .price-sub {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Card Quantity Controller */
+    .add-btn {
+      background: var(--green-light);
+      color: var(--green-primary);
+      border: 1.5px solid #d4e8d1;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-weight: 800;
+      font-size: 13px;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .add-btn:hover {
+      background: var(--green-primary);
+      color: white;
+      border-color: var(--green-primary);
+    }
+
+    .qty-card-control {
+      display: inline-flex;
+      align-items: center;
+      background: var(--green-primary);
+      color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .qty-card-btn {
+      width: 30px;
+      height: 32px;
+      color: white;
+      font-size: 16px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      transition: background 0.15s;
+    }
+    .qty-card-btn:hover {
+      background: var(--green-deep);
+    }
+    .qty-card-val {
+      min-width: 22px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--border-color);
+      color: var(--text-muted);
+    }
+
+    /* Process & Quality Story Section */
+    .story-section {
+      background: linear-gradient(180deg, #f4faf2 0%, #ebf5e9 100%);
+      padding: 60px 0;
+      border-radius: 30px;
+      margin: 20px 0;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .story-content h2 {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .story-content p {
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .step-card {
+      background: white;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+    .step-card strong {
+      display: block;
+      color: var(--green-primary);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .step-card p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .story-img-box {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 4px solid white;
+      max-height: 380px;
+    }
+    .story-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .story-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--green-primary);
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Quick Delivery WhatsApp Banner */
+    .whatsapp-banner {
+      background: linear-gradient(135deg, var(--orange-brand), #f44336);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 12px 32px rgba(255, 87, 34, 0.25);
+      margin-bottom: 60px;
+    }
+    .whatsapp-banner h2 {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .whatsapp-banner p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.94;
+    }
+    .whatsapp-btn {
+      background: white;
+      color: #1b7e3f;
+      border-radius: 12px;
+      padding: 16px 26px;
+      font-weight: 900;
+      font-size: 15px;
+      white-space: nowrap;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+      background: #f9fbf9;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--green-deep);
+      color: white;
+      padding: 50px 0 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    footer h3 {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    footer p, footer a {
+      color: #b9d8bc;
+      font-size: 13px;
+      line-height: 1.9;
+      margin: 0;
+    }
+    footer a:hover { color: white; }
+    .copyright-bar {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: #92bca0;
+      font-size: 12px;
+    }
+
+    /* Cart Drawer Modal */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: min(440px, 100%);
+      background: white;
+      z-index: 210;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.2);
+    }
+    .drawer.active {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .drawer-header h3 {
+      font-size: 22px;
+      color: var(--green-deep);
+    }
+    .close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--cream-bg);
+      font-size: 22px;
+      display: grid;
+      place-items: center;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .close-btn:hover { background: #e2ede0; color: var(--text-main); }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+    }
+
+    .free-shipping-progress {
+      background: #eef7ec;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: var(--green-primary);
+      font-weight: 700;
+    }
+    .progress-bar-bg {
+      height: 6px;
+      background: #c8e4c4;
+      border-radius: 999px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--green-primary);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .cart-item-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .cart-item-img {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: #f4faf2;
+      flex-shrink: 0;
+    }
+    .cart-item-info {
+      flex: 1;
+    }
+    .cart-item-info strong {
+      display: block;
+      font-size: 14px;
+      color: var(--green-deep);
+    }
+    .cart-item-info small {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    .qty-stepper {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: white;
+      font-weight: 800;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+    }
+    .qty-btn:hover { background: var(--green-light); border-color: var(--green-primary); }
+    .qty-num { font-size: 13px; font-weight: 900; min-width: 14px; text-align: center; }
+
+    .cart-item-price {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--green-primary);
+      text-align: right;
+    }
+
+    /* Checkout Customer Form */
+    .checkout-form {
+      margin-top: 20px;
+      background: #f9fdf8;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .checkout-form h4 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .checkout-form p {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .form-control {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 16px; /* Prevents auto-zoom on iOS */
+      outline: none;
+      background: white;
+      transition: var(--transition);
+    }
+    @media (min-width: 769px) {
+      .form-control { font-size: 13px; }
+    }
+    .form-control:focus {
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 2px rgba(14, 90, 43, 0.1);
+    }
+    textarea.form-control {
+      min-height: 60px;
+      resize: vertical;
+    }
+    .error-msg {
+      display: none;
+      background: #ffebee;
+      color: #c62828;
+      font-size: 12px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .drawer-footer {
+      padding: 20px 24px;
+      border-top: 1px solid var(--border-color);
+      background: white;
+    }
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+    .summary-row.total-row {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--green-deep);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-color);
+    }
+    .checkout-btn {
+      width: 100%;
+      background: #1b8a47;
+      color: white;
+      padding: 16px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 15px;
+      box-shadow: 0 6px 20px rgba(27, 138, 71, 0.25);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .checkout-btn:hover {
+      background: var(--green-primary);
+      box-shadow: 0 8px 24px rgba(27, 138, 71, 0.35);
+    }
+    .checkout-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    /* Mobile Floating Bottom Bar */
+    .mobile-bottom-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid var(--border-color);
+      padding: 10px 16px;
+      z-index: 85;
+      box-shadow: 0 -6px 20px rgba(0,0,0,0.08);
+    }
+    .mobile-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .mobile-cart-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .mobile-cart-total {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--green-primary);
+    }
+    .mobile-cart-count {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .mobile-view-cart-btn {
+      flex: 1;
+      background: var(--green-primary);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .mobile-wa-btn {
+      background: #25d366;
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 85px;
+      left: 50%;
+      transform: translate(-50%, 20px);
+      background: var(--green-deep);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-size: 13px;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 300;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 950px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero h1 { font-size: 42px; }
+      .nav-links { display: none; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .packages-grid { grid-template-columns: 1fr; gap: 32px; }
+      .calc-box { grid-template-columns: 1fr; gap: 26px; padding: 28px; }
+      .calc-results { grid-template-columns: repeat(3, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+      .story-grid { grid-template-columns: 1fr; gap: 26px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-bottom-bar { display: block; }
+      .topbar { font-size: 11px; padding: 7px 12px; }
+      .container { width: min(100% - 24px, 1180px); }
+      .nav { min-height: 64px; }
+      .logo-title { font-size: 22px; }
+      .logo-img { width: 40px; height: 40px; }
+      .packages-header h2 { font-size: 30px; }
+      .section-header h2 { font-size: 28px; }
+      .section-header { flex-direction: column; align-items: flex-start; }
+      .search-wrapper { width: 100%; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .product-content { padding: 12px; }
+      .product-title { font-size: 14px; }
+      .product-desc { font-size: 11px; min-height: unset; margin-bottom: 8px; }
+      .price-val { font-size: 16px; }
+      .add-btn { padding: 7px 10px; font-size: 12px; }
+      .whatsapp-banner { flex-direction: column; text-align: center; padding: 28px 20px; }
+      .whatsapp-btn { width: 100%; justify-content: center; }
+      .process-steps { grid-template-columns: 1fr; }
+      .copyright-bar { flex-direction: column; text-align: center; gap: 8px; }
+      .calc-results { grid-template-columns: 1fr; gap: 10px; }
+    }
+
+    @media (max-width: 420px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 34px; }
+      .btn { width: 100%; }
+      .features-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <span>
+      <span class="svg-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 9 0 4.9-4 9-9 9z"></path><path d="M11 20v-7.5"></path></svg></span>
+      <span class="highlight">100% Farm-Fresh Organic Veggies</span> • Zero Chemicals & Pesticides
+    </span>
+    <span>•</span>
+    <span>
+      <span class="svg-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"></rect><path d="M12 8V3"></path><path d="M7.5 3a2.5 2.5 0 0 1 4.5 1.5H3.5A2.5 2.5 0 0 1 7.5 3z"></path><path d="M16.5 3a2.5 2.5 0 0 0-4.5 1.5h8.5A2.5 2.5 0 0 0 16.5 3z"></path></svg></span>
+      Use Code <span class="highlight">TAJA10</span> for 10% OFF
+    </span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="Tajatokari home">
+        <img src="images/tajatokari_logo.svg" class="logo-img" alt="Tajatokari Organic Basket Logo" />
+        <div>
+          <div class="logo-title">Taja<span>tokari</span></div>
+          <div class="logo-sub">100% Organic Farm Freshness</div>
+        </div>
+      </a>
+      
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#packages">Organic Packages</a>
+        <a href="#custom-basket">Custom Basket</a>
+        <a href="#recipes">10-Min Recipes</a>
+        <a href="#shop">Shop Products</a>
+        <a href="#calculator">Savings Calc</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button class="cart-btn" id="openCartBtn" aria-label="Open Shopping Basket">
+        <span class="svg-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </span>
+        <span>Basket</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow-badge">
+            <span class="svg-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 9 0 4.9-4 9-9 9z"></path><path d="M11 20v-7.5"></path></svg></span>
+            100% Organic & Chemical-Free Produce
+          </div>
+          <h1>100% Organic Veggies.<br><em>Direct From Farms.</em><br>Zero Chemicals.</h1>
+          <p class="hero-copy">Hand-picked 100% organic vegetables grown without synthetic pesticides or chemicals. Washed, chopped, and hygienically packed for instant healthy home cooking in Ahmedabad.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#packages">Explore Organic Packages ↓</a>
+            <a class="btn btn-secondary" href="#shop">View Organic Catalog</a>
+          </div>
+          <div class="trust-pills">
+            <span class="trust-pill"><span class="trust-pill-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 100% Organic</span>
+            <span class="trust-pill"><span class="trust-pill-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Zero Chemicals</span>
+            <span class="trust-pill"><span class="trust-pill-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Direct Farm Sourced</span>
+            <span class="trust-pill"><span class="trust-pill-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Ozone Sanitized</span>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-img-box">
+            <img src="images/mixed_vegetables.jpg" alt="Tajatokari organic ready-to-cook vegetables and fresh farm produce spread" />
+          </div>
+          <div class="hero-badge-float">
+            <img src="images/tajatokari_logo.svg" class="hero-badge-icon-img" alt="Tajatokari Organic Badge" />
+            <div class="hero-badge-text">
+              <strong>100% Organic Certified</strong>
+              <small>Direct from local partner farms</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Ribbon -->
+    <div class="features-ribbon">
+      <div class="container features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 9 0 4.9-4 9-9 9z"></path><path d="M11 20v-7.5"></path></svg>
+          </div>
+          <div class="feature-text">
+            <strong>100% Organic Farm</strong>
+            <small>Zero synthetic chemicals & pesticides</small>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6a6 6 0 0 0-6 6"></path></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Washed & Chopped</strong>
+            <small>Triple washed & uniform cuts</small>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Hygienically Sealed</strong>
+            <small>Ozone sanitized air-tight pack</small>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Fast Farm Delivery</strong>
+            <small>Delivered fresh in Ahmedabad</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Family Meal Packages Section -->
+    <section class="packages-section" id="packages">
+      <div class="container">
+        <div class="packages-header">
+          <div class="eyebrow-badge">
+            <span class="svg-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
+            Smart Organic Bundles
+          </div>
+          <h2>Choose Your Family Organic Package</h2>
+          <p>Curated 100% organic vegetable packages sourced direct from chemical-free farms for daily home cooking.</p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Starter Pack (199 Rs) -->
+          <div class="pkg-card">
+            <div class="pkg-top-badge">Popular Starter</div>
+            <div class="pkg-img-wrap">
+              <img src="images/starter_pack.jpg" alt="Organic Starter Package for 2-3 persons" />
+            </div>
+            <div class="pkg-people-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              2 – 3 Persons
+            </div>
+            <h3 class="pkg-title">Starter Package</h3>
+            <div class="pkg-sub">100% Organic daily chopped veggies for couples & small families.</div>
+            <div class="pkg-price-row">
+              <span class="pkg-price">₹199</span>
+              <span class="pkg-price-unit">/ pack</span>
+            </div>
+            <ul class="pkg-list">
+              <li>100% Organic & Chemical-Free</li>
+              <li>Chopped Organic Onion (250g)</li>
+              <li>Chopped Organic Tomato (250g)</li>
+              <li>Chopped Organic Capsicum (250g)</li>
+              <li>Chopped Organic Carrot (250g)</li>
+              <li>Free Delivery Included</li>
+            </ul>
+            <button class="pkg-btn" data-pkgid="101">Add Starter Pack (₹199) →</button>
+          </div>
+
+          <!-- Grow Pack (499 Rs) -->
+          <div class="pkg-card featured">
+            <div class="pkg-top-badge">Most Popular</div>
+            <div class="pkg-img-wrap">
+              <img src="images/grow_pack.jpg" alt="Organic Grow Package for 4-5 persons" />
+            </div>
+            <div class="pkg-people-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              4 – 5 Persons
+            </div>
+            <h3 class="pkg-title">Grow Package</h3>
+            <div class="pkg-sub">100% Organic meal prep bundle for medium families. Best value!</div>
+            <div class="pkg-price-row">
+              <span class="pkg-price">₹499</span>
+              <span class="pkg-price-unit">/ pack</span>
+            </div>
+            <ul class="pkg-list">
+              <li>100% Organic & Chemical-Free</li>
+              <li>Organic Onion (500g) & Tomato (500g)</li>
+              <li>Organic Capsicum (500g) & Carrot (500g)</li>
+              <li>Organic Cabbage (500g)</li>
+              <li>1 Natural Gravy Base Pouch</li>
+              <li>Save ₹80 vs individual items</li>
+            </ul>
+            <button class="pkg-btn" data-pkgid="102">Add Grow Pack (₹499) →</button>
+          </div>
+
+          <!-- Premium Pack (799 Rs) -->
+          <div class="pkg-card">
+            <div class="pkg-top-badge">Ultimate Value</div>
+            <div class="pkg-img-wrap">
+              <img src="images/premium_pack.jpg" alt="Organic Premium Package for 7-8 persons" />
+            </div>
+            <div class="pkg-people-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              7 – 8 Persons
+            </div>
+            <h3 class="pkg-title">Premium Package</h3>
+            <div class="pkg-sub">100% Organic weekly prep hamper for large families. Zero pesticides!</div>
+            <div class="pkg-price-row">
+              <span class="pkg-price">₹799</span>
+              <span class="pkg-price-unit">/ pack</span>
+            </div>
+            <ul class="pkg-list">
+              <li>100% Organic & Chemical-Free</li>
+              <li>Organic Onion (1kg) & Tomato (1kg)</li>
+              <li>Capsicum, Carrot, Cabbage (500g ea)</li>
+              <li>Mixed Organic Veg & Broccoli (500g ea)</li>
+              <li>Fresh Organic Paneer Cubes (500g)</li>
+              <li>Save ₹180 + Priority Delivery</li>
+            </ul>
+            <button class="pkg-btn" data-pkgid="103">Add Premium Pack (₹799) →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Basket Creator Section -->
+    <section class="custom-basket-section" id="custom-basket">
+      <div class="container">
+        <div class="packages-header">
+          <div class="eyebrow-badge">
+            <span class="svg-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </span>
+            Custom Combo Creator
+          </div>
+          <h2>Build Your Own Organic Basket</h2>
+          <p>Choose your preferred basket size and pick your favorite 100% organic chopped vegetables!</p>
+        </div>
+
+        <div class="custom-basket-box">
+          <label style="font-weight:800; color:var(--green-deep); font-size:14px;">1. Choose Basket Size:</label>
+          <div class="basket-size-picker" id="basketSizePickerContainer">
+            <div class="basket-size-card active" data-size="4" data-price="249">
+              <div>
+                <strong>4 Veggie Box</strong>
+                <small>Select any 4 organic items</small>
+              </div>
+              <div class="basket-size-price">₹249</div>
+            </div>
+            <div class="basket-size-card" data-size="6" data-price="369">
+              <div>
+                <strong>6 Veggie Box (Best Value)</strong>
+                <small>Select any 6 organic items</small>
+              </div>
+              <div class="basket-size-price">₹369</div>
+            </div>
+            <div class="basket-size-card" data-size="8" data-price="479">
+              <div>
+                <strong>8 Veggie Family Hamper</strong>
+                <small>Select any 8 organic items</small>
+              </div>
+              <div class="basket-size-price">₹479</div>
+            </div>
+          </div>
+
+          <label style="font-weight:800; color:var(--green-deep); font-size:14px; margin-bottom:12px; display:block;">2. Pick Your Vegetables (<span id="selectedCountDisplay">0</span> of <span id="targetCountDisplay">4</span> selected):</label>
+          <div class="veggie-picker-grid" id="veggiePickerContainer"></div>
+
+          <div class="custom-basket-summary">
+            <div>
+              <strong style="font-size:16px;">Your Custom Basket Contents:</strong>
+              <div class="selected-chips-row" id="selectedChipsContainer">
+                <span style="font-size:12px; opacity:0.8;">No items selected yet. Tap veggies above to add to your custom basket.</span>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="addCustomBasketBtn" style="background:var(--orange-brand); border:0; padding:14px 28px;" disabled>
+              Add Custom Basket to Basket →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10-Minute Meal Prep Recipes Section -->
+    <section class="recipes-section" id="recipes">
+      <div class="container">
+        <div class="packages-header">
+          <div class="eyebrow-badge">
+            <span class="svg-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </span>
+            10-Minute Healthy Meals
+          </div>
+          <h2>Quick Meal Prep Guides & Ingredient Bundles</h2>
+          <p>Zero chopping required! Add all pre-washed organic ingredients for your favorite dish with one tap.</p>
+        </div>
+
+        <div class="recipes-grid" id="recipesGridContainer">
+          <div class="recipe-card">
+            <div class="recipe-img-box">
+              <img src="images/mixed_vegetables.jpg" class="recipe-img" alt="10-Min Organic Pav Bhaji Prep" />
+              <div class="recipe-time-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                10-Min Cooking Prep
+              </div>
+            </div>
+            <div class="recipe-body">
+              <div>
+                <h3 class="recipe-title">Organic Pav Bhaji Prep</h3>
+                <p class="recipe-desc">Diced organic onions, tomatoes, green capsicum & authentic gravy base. Ready for pan!</p>
+                <div class="recipe-ingredients-tags">
+                  <span class="ing-tag">Chopped Onion</span>
+                  <span class="ing-tag">Chopped Tomato</span>
+                  <span class="ing-tag">Chopped Capsicum</span>
+                  <span class="ing-tag">Gravy Base</span>
+                </div>
+              </div>
+              <div class="recipe-footer">
+                <div class="recipe-price-val">₹189</div>
+                <button class="recipe-btn" data-recipeid="rec1">Add Recipe Bundle →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-img-box">
+              <img src="images/paneer_cubes.jpg" class="recipe-img" alt="10-Min Paneer Masala Prep" />
+              <div class="recipe-time-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                10-Min Cooking Prep
+              </div>
+            </div>
+            <div class="recipe-body">
+              <div>
+                <h3 class="recipe-title">Paneer Butter Masala Bundle</h3>
+                <p class="recipe-desc">Fresh organic cottage paneer cubes + rich slow-cooked gravy base + diced tomatoes.</p>
+                <div class="recipe-ingredients-tags">
+                  <span class="ing-tag">Paneer Cubes</span>
+                  <span class="ing-tag">Gravy Base</span>
+                  <span class="ing-tag">Chopped Tomato</span>
+                </div>
+              </div>
+              <div class="recipe-footer">
+                <div class="recipe-price-val">₹249</div>
+                <button class="recipe-btn" data-recipeid="rec2">Add Recipe Bundle →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-img-box">
+              <img src="images/chopped_carrot.jpg" class="recipe-img" alt="10-Min Veg Stir Fry Prep" />
+              <div class="recipe-time-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                10-Min Cooking Prep
+              </div>
+            </div>
+            <div class="recipe-body">
+              <div>
+                <h3 class="recipe-title">Veg Stir-Fry / Fried Rice</h3>
+                <p class="recipe-desc">Uniformly diced carrots, shredded cabbage, trimmed French beans & green capsicum.</p>
+                <div class="recipe-ingredients-tags">
+                  <span class="ing-tag">Chopped Carrot</span>
+                  <span class="ing-tag">Chopped Cabbage</span>
+                  <span class="ing-tag">Chopped Beans</span>
+                  <span class="ing-tag">Capsicum</span>
+                </div>
+              </div>
+              <div class="recipe-footer">
+                <div class="recipe-price-val">₹169</div>
+                <button class="recipe-btn" data-recipeid="rec3">Add Recipe Bundle →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-img-box">
+              <img src="images/mixed_vegetables.jpg" class="recipe-img" alt="10-Min Gujarati Mix Veg Prep" />
+              <div class="recipe-time-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                10-Min Cooking Prep
+              </div>
+            </div>
+            <div class="recipe-body">
+              <div>
+                <h3 class="recipe-title">Gujarati Mix Veg Curry</h3>
+                <p class="recipe-desc">Colorful organic mixed veggies + diced red onions + rich onion tomato gravy base.</p>
+                <div class="recipe-ingredients-tags">
+                  <span class="ing-tag">Mixed Veggies</span>
+                  <span class="ing-tag">Chopped Onion</span>
+                  <span class="ing-tag">Gravy Base</span>
+                </div>
+              </div>
+              <div class="recipe-footer">
+                <div class="recipe-price-val">₹199</div>
+                <button class="recipe-btn" data-recipeid="rec4">Add Recipe Bundle →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Time & Waste Calculator -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+        <div class="calc-box">
+          <div class="calc-info">
+            <div class="eyebrow-badge">
+              <span class="svg-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+              Kitchen Time Saved Calculator
+            </div>
+            <h2>See how much time Tajatokari saves you!</h2>
+            <p>Washing, peeling, chopping, and kitchen cleanup takes 35 minutes per meal. Adjust your weekly cooking frequency:</p>
+            
+            <div class="calc-controls">
+              <label for="mealFrequency">Meals cooked per week:</label>
+              <div class="calc-range-row">
+                <input type="range" id="mealFrequency" min="2" max="21" value="7" step="1" />
+                <span class="calc-range-val" id="mealValDisplay">7 Meals / Week</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="result-card">
+              <div class="result-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="result-num" id="hoursSaved">4.1 Hrs</div>
+              <div class="result-label">Time Saved Every Week</div>
+            </div>
+
+            <div class="result-card">
+              <div class="result-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              </div>
+              <div class="result-num" id="wasteAvoided">2.8 Kg</div>
+              <div class="result-label">Zero Kitchen Peel Waste</div>
+            </div>
+
+            <div class="result-card">
+              <div class="result-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 9 0 4.9-4 9-9 9z"></path><path d="M11 20v-7.5"></path></svg>
+              </div>
+              <div class="result-num">100%</div>
+              <div class="result-label">Organic Chemical-Free</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Catalog Section -->
+    <section class="shop-section" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>100% Organic Individual Items</h2>
+            <p>Sourced fresh from local organic farms every morning. Prepared daily in small batches.</p>
+          </div>
+          <div class="search-wrapper">
+            <input class="search-input" id="searchInput" type="search" placeholder="Search organic vegetables & packages (e.g., starter, onion, paneer)..." aria-label="Search vegetables" />
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <div class="categories-bar" id="categoriesContainer"></div>
+        <div class="products-grid" id="productsContainer"></div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews / Testimonials -->
+    <section class="testimonials-section" id="reviews">
+      <div class="container">
+        <div class="packages-header">
+          <div class="eyebrow-badge">
+            <span class="svg-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </span>
+            Customer Love
+          </div>
+          <h2>Loved by 2,500+ Homes in Ahmedabad</h2>
+          <p>Read what our daily home cooks and working professionals say about our organic produce.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="review-card">
+            <div class="review-stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="review-text">"Finding genuine chemical-free organic veggies in Ahmedabad was hard until I found Tajatokari. You can taste the real farm-fresh sweet flavor in their carrots and tomatoes!"</p>
+            <div class="reviewer">
+              <div class="reviewer-initial-badge">PS</div>
+              <div>
+                <strong>Priya Sharma</strong>
+                <small>Satellite, Ahmedabad • Verified Customer</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="review-text">"The Starter Pack at ₹199 is unbelievable value! 100% organic, zero pesticides, and neatly chopped. Saves me at least 30 mins every morning before office."</p>
+            <div class="reviewer">
+              <div class="reviewer-initial-badge">AP</div>
+              <div>
+                <strong>Ankit Patel</strong>
+                <small>Bodakdev, Ahmedabad • Verified Customer</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffb300" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="review-text">"We ordered the Premium Organic Pack for a family dinner. The Paneer cubes and Gravy Base were completely natural without preservatives. Highly recommended!"</p>
+            <div class="reviewer">
+              <div class="reviewer-initial-badge">RM</div>
+              <div>
+                <strong>Neha & Rajesh Mehta</strong>
+                <small>Vastrapur, Ahmedabad • Verified Customer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us & Organic Process Section -->
+    <section class="story-section" id="why-us">
+      <div class="container story-grid">
+        <div class="story-content">
+          <div class="eyebrow-badge">The Tajatokari Promise</div>
+          <h2>Good health starts with 100% Organic farm produce.</h2>
+          <p>We work directly with certified chemical-free partner farms in Gujarat. Every batch is harvested fresh, ozone-washed, and precision-chopped without any synthetic chemicals or preservatives.</p>
+
+          <div class="process-steps">
+            <div class="step-card">
+              <strong>1. Direct Organic Farms</strong>
+              <p>Hand-picked 100% organic produce grown without synthetic pesticides or fertilizers.</p>
+            </div>
+            <div class="step-card">
+              <strong>2. Ozone Purified</strong>
+              <p>Washed in purified ozone water to eliminate any environmental dust or surface impurities.</p>
+            </div>
+            <div class="step-card">
+              <strong>3. Precision Cut</strong>
+              <p>Uniformly chopped by trained experts using food-grade stainless steel equipment.</p>
+            </div>
+            <div class="step-card">
+              <strong>4. Airtight Eco-Pack</strong>
+              <p>Sealed in food-grade airtight pouches preserving natural farm flavor and vitamins.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-img-box">
+          <img src="images/story_prep.jpg" alt="Tajatokari clean organic kitchen vegetable preparation" />
+          <div class="story-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 9 0 4.9-4 9-9 9z"></path><path d="M11 20v-7.5"></path></svg>
+            100% Organic & Chemical-Free Guarantee
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions Accordion -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="packages-header">
+          <div class="eyebrow-badge">Got Questions?</div>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about our organic sourcing, freshness, and delivery.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are Tajatokari vegetables truly 100% organic and chemical-free?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! All our vegetables are sourced directly from trusted organic partner farms in Gujarat. We strictly ensure ZERO chemical pesticides, ZERO synthetic fertilizers, and ZERO artificial wax coatings.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How long do the chopped organic vegetables stay fresh in the fridge?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our vegetables undergo a 3-step ozone purified wash and are vacuum sealed in food-grade pouches. They stay crisp and fresh for up to 4 to 5 days when stored in your refrigerator crisper drawer.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is delivery free in Ahmedabad?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! All orders of ₹199 or above qualify for FREE home delivery across Ahmedabad. For orders below ₹199, a nominal ₹29 delivery fee applies.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I pay for my order?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We offer 100% Pay On Delivery convenience! You can pay via UPI (Google Pay, PhonePe, Paytm), QR code, or Cash after inspecting your fresh delivery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct Delivery WhatsApp Banner -->
+    <section id="delivery">
+      <div class="container">
+        <div class="whatsapp-banner">
+          <div>
+            <h2>Need a custom organic order or bulk package?</h2>
+            <p>We supply fresh 100% organic chopped veggies for daily home meals, events, and parties in Ahmedabad. Min order ₹199.</p>
+          </div>
+          <button class="whatsapp-btn" id="directWhatsappBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.149 4.192 4.292-1.125z"/></svg>
+            <span>Direct Order on WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:14px;">
+            <img src="images/tajatokari_logo.svg" class="logo-img" alt="Tajatokari Organic Basket Logo" />
+            <div>
+              <div class="logo-title" style="color:white;">Taja<span>tokari</span></div>
+              <div class="logo-sub" style="color:#b9d8bc;">100% Organic Farm Freshness</div>
+            </div>
+          </div>
+          <p>100% Organic, chemical-free ready-to-cook fresh vegetables and essential kitchen bases, prepared for healthy modern living.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="#packages">Organic Packages</a><br />
+          <a href="#shop">Explore Catalog</a><br />
+          <a href="#calculator">Time Savings Calc</a><br />
+          <a href="#faq">FAQ</a>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p>📍 Ahmedabad, Gujarat</p>
+          <p>💬 WhatsApp: +91 99044 80812</p>
+          <p>🕘 Order Hours: 9 AM – 8 PM</p>
+        </div>
+      </div>
+      <div class="copyright-bar">
+        <span>© 2026 Tajatokari. All rights reserved.</span>
+        <span>100% Organic • Chemical Free • Healthy Living</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Persistent Floating WhatsApp Assistant Widget -->
+  <div class="floating-wa-widget" id="floatingWaWidget">
+    <div class="wa-widget-tooltip">
+      <strong>Need quick help?</strong>
+      <span>Order Organic Veggies on WhatsApp</span>
+    </div>
+    <button class="wa-widget-btn" id="floatingWaBtn" aria-label="Chat on WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.149 4.192 4.292-1.125z"/></svg>
+      <span class="wa-online-dot"></span>
+    </button>
+  </div>
+
+  <!-- Floating Mobile Bottom Bar -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <div class="mobile-bar-content">
+      <div class="mobile-cart-info">
+        <span class="mobile-cart-total" id="mobileTotal">₹0</span>
+        <span class="mobile-cart-count" id="mobileItemCount">0 items in basket</span>
+      </div>
+      <button class="mobile-view-cart-btn" id="mobileCartTrigger">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span>View Basket</span>
+      </button>
+      <button class="mobile-wa-btn" id="mobileWaTrigger" aria-label="Order via WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.149 4.192 4.292-1.125z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Drawer & Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <h3>Your Basket</h3>
+      <button class="close-btn" id="closeCartBtn" aria-label="Close cart">×</button>
+    </div>
+
+    <div class="drawer-body">
+      <div class="free-shipping-progress" id="shippingProgress">
+        <span id="shippingProgressText">Add items to basket to check delivery status.</span>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="shippingProgressBar"></div></div>
+      </div>
+
+      <div id="cartItemsContainer"></div>
+
+      <!-- Coupon Box -->
+      <div style="margin-top:14px;">
+        <div class="coupon-box">
+          <input class="form-control coupon-input" id="couponCodeInput" type="text" placeholder="Coupon (e.g. TAJA10)" />
+          <button class="coupon-apply-btn" id="applyCouponBtn">Apply</button>
+        </div>
+        <div class="coupon-applied-tag" id="couponAppliedTag">🎉 Coupon TAJA10 Applied! 10% Discount active.</div>
+      </div>
+
+      <!-- Checkout Customer Form -->
+      <div class="checkout-form" id="checkoutForm">
+        <h4>Delivery & Payment Information</h4>
+        <p>Your details are automatically saved for quick future orders.</p>
+        
+        <div class="form-group">
+          <input class="form-control" id="custName" type="text" placeholder="Full Name *" autocomplete="name" />
+        </div>
+        <div class="form-row form-group">
+          <input class="form-control" id="custPhone" type="tel" placeholder="Mobile Number *" inputmode="tel" autocomplete="tel" />
+          <select class="form-control" id="custSlot">
+            <option value="">Delivery Slot</option>
+            <option>Morning (9 AM - 12 PM)</option>
+            <option>Afternoon (12 PM - 4 PM)</option>
+            <option>Evening (4 PM - 8 PM)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="custAddress" placeholder="Complete Delivery Address (House/Flat No, Building, Street) *" autocomplete="street-address"></textarea>
+        </div>
+        <div class="form-row form-group">
+          <input class="form-control" id="custLandmark" type="text" placeholder="Landmark / Area (e.g. Satellite)" />
+          <select class="form-control" id="custPayment">
+            <option value="UPI / GPay on Delivery">UPI / GPay on Delivery</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+          </select>
+        </div>
+        <div class="error-msg" id="formError"></div>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="summary-row">
+        <span>Items Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="summary-row" id="discountRow" style="display:none; color: var(--green-primary); font-weight: 700;">
+        <span>Promo Discount (10%)</span>
+        <span id="discountVal">-₹0</span>
+      </div>
+      <div class="summary-row total-row">
+        <span>Total Payable</span>
+        <span id="cartFinalTotal">₹0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">
+        <span>Confirm Details & Order on WhatsApp →</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Toast Message -->
+  <div class="toast" id="toastMsg" aria-live="polite"></div>
+
+  <!-- Application Logic -->
+  <script>
+    (() => {
+      const whatsappNumber = "919904480812";
+
+      // Products Catalog with Packages & Individual Items
+      const products = [
+        // 3 Family Packages
+        {
+          id: 101,
+          name: "Starter Package (2-3 Persons)",
+          category: "Packages & Bundles",
+          tag: "100% Organic",
+          image: "images/starter_pack.jpg",
+          desc: "Ideal for 2-3 persons. Includes 4 essential 100% organic chopped veggie packs (Onion, Tomato, Capsicum, Carrot). Zero chemicals!",
+          variants: [{ size: "2-3 Persons Pack", price: 199 }]
+        },
+        {
+          id: 102,
+          name: "Grow Package (4-5 Persons)",
+          category: "Packages & Bundles",
+          tag: "100% Organic Best Value",
+          image: "images/grow_pack.jpg",
+          desc: "Ideal for 4-5 persons. Includes 6 organic daily chopped veggies + 1 Chef Gravy Base pouch. Save ₹80!",
+          variants: [{ size: "4-5 Persons Pack", price: 499 }]
+        },
+        {
+          id: 103,
+          name: "Premium Package (7-8 Persons)",
+          category: "Packages & Bundles",
+          tag: "100% Organic Ultimate",
+          image: "images/premium_pack.jpg",
+          desc: "Full weekly organic prep hamper for 7-8 persons. Includes 8 organic veggie packs, Paneer & 2 Gravy Bases. Save ₹180!",
+          variants: [{ size: "7-8 Persons Pack", price: 799 }]
+        },
+        // Individual Products
+        {
+          id: 1,
+          name: "Chopped Organic Onion",
+          category: "Vegetables",
+          tag: "100% Organic",
+          idealDish: "Ideal for Sabzi, Gravies & Pulao",
+          image: "images/chopped_onion.jpg",
+          desc: "Chemical-free organic red onions washed and diced uniformly for quick cooking.",
+          variants: [{ size: "250 g", price: 49 }, { size: "500 g", price: 89 }, { size: "1 kg", price: 159 }]
+        },
+        {
+          id: 2,
+          name: "Chopped Organic Tomato",
+          category: "Vegetables",
+          tag: "100% Organic",
+          idealDish: "Ideal for Curries, Gravies & Salads",
+          image: "images/chopped_tomato.jpg",
+          desc: "Farm-fresh organic red tomatoes neatly diced and ready for curries & salads.",
+          variants: [{ size: "250 g", price: 49 }, { size: "500 g", price: 89 }, { size: "1 kg", price: 159 }]
+        },
+        {
+          id: 3,
+          name: "Chopped Organic Capsicum",
+          category: "Vegetables",
+          tag: "100% Organic",
+          idealDish: "Ideal for Pav Bhaji, Chinese & Pizza",
+          image: "images/chopped_capsicum.jpg",
+          desc: "Pesticide-free organic green bell peppers seedless & chopped for stir-fry.",
+          variants: [{ size: "250 g", price: 59 }, { size: "500 g", price: 109 }, { size: "1 kg", price: 199 }]
+        },
+        {
+          id: 4,
+          name: "Chopped Organic Carrot",
+          category: "Vegetables",
+          tag: "100% Organic",
+          idealDish: "Ideal for Fried Rice, Stir-Fry & Soups",
+          image: "images/chopped_carrot.jpg",
+          desc: "Sweet organic carrots peeled and cut into uniform cooking pieces.",
+          variants: [{ size: "250 g", price: 49 }, { size: "500 g", price: 89 }, { size: "1 kg", price: 159 }]
+        },
+        {
+          id: 5,
+          name: "Chopped Organic Cabbage",
+          category: "Vegetables",
+          tag: "100% Organic",
+          idealDish: "Ideal for Manchurian, Chowmein & Salad",
+          image: "images/chopped_cabbage.jpg",
+          desc: "Crisp organic green cabbage finely shredded and ozone sanitized.",
+          variants: [{ size: "250 g", price: 39 }, { size: "500 g", price: 69 }, { size: "1 kg", price: 119 }]
+        },
+        {
+          id: 6,
+          name: "Chopped Organic Beans",
+          category: "Vegetables",
+          tag: "100% Organic",
+          idealDish: "Ideal for Fried Rice, Mix Veg & Poriyal",
+          image: "images/chopped_beans.jpg",
+          desc: "Organic French beans trimmed and cut to standard bite-sized pieces.",
+          variants: [{ size: "250 g", price: 69 }, { size: "500 g", price: 129 }, { size: "1 kg", price: 239 }]
+        },
+        {
+          id: 7,
+          name: "Organic Mixed Vegetables",
+          category: "Combos",
+          tag: "100% Organic",
+          idealDish: "Ideal for Mix Veg Curry, Pulao & Soup",
+          image: "images/mixed_vegetables.jpg",
+          desc: "Colorful combination of organic carrots, green peas, capsicum & corn.",
+          variants: [{ size: "250 g", price: 89 }, { size: "500 g", price: 159 }, { size: "1 kg", price: 299 }]
+        },
+        {
+          id: 8,
+          name: "Organic Broccoli Florets",
+          category: "Vegetables",
+          tag: "100% Organic",
+          idealDish: "Ideal for Steamed Broccoli, Pasta & Salad",
+          image: "images/broccoli_florets.jpg",
+          desc: "Cleaned and portioned organic broccoli florets ready for steaming.",
+          variants: [{ size: "250 g", price: 99 }, { size: "500 g", price: 179 }, { size: "1 kg", price: 329 }]
+        },
+        {
+          id: 9,
+          name: "Organic Paneer Cubes",
+          category: "Dairy & More",
+          tag: "100% Organic",
+          idealDish: "Ideal for Paneer Butter Masala & Kadai",
+          image: "images/paneer_cubes.jpg",
+          desc: "Soft, rich organic cottage paneer diced into cooking cubes. High protein.",
+          variants: [{ size: "200 g", price: 129 }, { size: "500 g", price: 299 }, { size: "1 kg", price: 549 }]
+        },
+        {
+          id: 10,
+          name: "Natural Gravy Base",
+          category: "Cooking Essentials",
+          tag: "100% Natural",
+          idealDish: "Ideal for Instant Gravies & Curries",
+          image: "images/gravy_base.jpg",
+          desc: "Slow-cooked organic onion tomato base puree. Zero preservatives.",
+          variants: [{ size: "250 g", price: 99 }, { size: "500 g", price: 179 }, { size: "1 kg", price: 329 }]
+        }
+      ];
+
+      // Application State
+      let cart = [];
+      let selectedCategory = "All Veggies";
+      let isCouponApplied = false;
+      const $ = id => document.getElementById(id);
+
+      // Save & Load Customer Details from Local Storage
+      function loadSavedCustomerInfo() {
+        try {
+          const saved = localStorage.getItem("tajatokari_customer");
+          if (saved) {
+            const data = JSON.parse(saved);
+            if (data.name) $("custName").value = data.name;
+            if (data.phone) $("custPhone").value = data.phone;
+            if (data.address) $("custAddress").value = data.address;
+            if (data.landmark) $("custLandmark").value = data.landmark;
+            if (data.slot) $("custSlot").value = data.slot;
+            if (data.payment) $("custPayment").value = data.payment;
+          }
+        } catch (e) {
+          console.warn("Could not load saved customer info", e);
+        }
+      }
+
+      function saveCustomerInfo() {
+        try {
+          const data = {
+            name: $("custName").value.trim(),
+            phone: $("custPhone").value.trim(),
+            address: $("custAddress").value.trim(),
+            landmark: $("custLandmark").value.trim(),
+            slot: $("custSlot").value,
+            payment: $("custPayment").value
+          };
+          localStorage.setItem("tajatokari_customer", JSON.stringify(data));
+        } catch (e) {
+          console.warn("Could not save customer info", e);
+        }
+      }
+
+      // Categories
+      const categories = ["All Veggies", "Vegetables", "Combos", "Dairy & More", "Cooking Essentials", "Family Bundles"];
+
+      function renderCategories() {
+        $("categoriesContainer").innerHTML = categories.map(c => {
+          let count = 0;
+          if (c === "All Veggies") {
+            count = products.filter(p => p.category !== "Packages & Bundles").length;
+          } else if (c === "Family Bundles") {
+            count = products.filter(p => p.category === "Packages & Bundles").length;
+          } else {
+            count = products.filter(p => p.category === c).length;
+          }
+
+          return `
+            <button class="cat-btn ${selectedCategory === c ? 'active' : ''}" data-category="${c}">
+              <span>${c}</span>
+              <span class="cat-count">${count}</span>
+            </button>
+          `;
+        }).join("");
+
+        document.querySelectorAll("[data-category]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const cat = btn.dataset.category;
+            if (cat === "Family Bundles") {
+              const pkgSec = $("packages");
+              if (pkgSec) pkgSec.scrollIntoView({ behavior: "smooth" });
+            }
+            selectedCategory = cat;
+            renderCategories();
+            renderProducts();
+          });
+        });
+      }
+
+      // Render Product Cards
+      function renderProducts() {
+        const query = $("searchInput").value.toLowerCase().trim();
+        const filtered = products.filter(p => {
+          let matchCat = false;
+          if (selectedCategory === "All Veggies") {
+            matchCat = p.category !== "Packages & Bundles";
+          } else if (selectedCategory === "Family Bundles") {
+            matchCat = p.category === "Packages & Bundles";
+          } else {
+            matchCat = p.category === selectedCategory;
+          }
+
+          const matchQuery = !query || `${p.name} ${p.category} ${p.desc}`.toLowerCase().includes(query);
+          return matchCat && matchQuery;
+        });
+
+        if (!filtered.length) {
+          $("productsContainer").innerHTML = `
+            <div class="empty-state">
+              <div style="font-size:36px; margin-bottom:10px;">🔍</div>
+              <h3>No organic vegetables or packages matched your search</h3>
+              <p>Try searching for "Starter", "Organic", "Onion", "Paneer", or select another category above.</p>
+            </div>
+          `;
+          return;
+        }
+
+        $("productsContainer").innerHTML = filtered.map(p => {
+          const firstVariant = p.variants[0];
+          // Check if item is in cart
+          const cartItem = cart.find(i => i.id === p.id && i.variantIndex === 0);
+          const qtyInCart = cartItem ? cartItem.qty : 0;
+
+          return `
+            <article class="product-card" id="card-${p.id}">
+              <div class="product-img-wrapper">
+                <img class="product-img" src="${p.image}" alt="${p.name}" loading="lazy" />
+                <span class="tag-badge">${p.tag}</span>
+                <span class="freshness-icon" title="100% Organic & Ozone Washed">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 9 0 4.9-4 9-9 9z"></path><path d="M11 20v-7.5"></path></svg>
+                </span>
+              </div>
+              
+              <div class="product-content">
+                ${p.idealDish ? `<div class="ideal-dish-badge"><span class="svg-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg></span> ${p.idealDish}</div>` : ''}
+                <h3 class="product-title">${p.name}</h3>
+                <p class="product-desc">${p.desc}</p>
+                
+                <label class="variant-label" for="select-${p.id}">Choose Pack Size</label>
+                <select class="variant-select" id="select-${p.id}" data-prodid="${p.id}">
+                  ${p.variants.map((v, idx) => `<option value="${idx}">${v.size} — ₹${v.price}</option>`).join("")}
+                </select>
+
+                <div class="card-footer">
+                  <div class="price-box">
+                    <span class="price-val" id="priceDisplay-${p.id}">₹${firstVariant.price}</span>
+                    <span class="price-sub" id="sizeDisplay-${p.id}">${firstVariant.size}</span>
+                  </div>
+
+                  <div id="btnContainer-${p.id}">
+                    ${renderCardButtonHtml(p.id, 0, qtyInCart)}
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+
+        // Attach listeners for variant select changes
+        document.querySelectorAll("[data-prodid]").forEach(select => {
+          select.addEventListener("change", (e) => {
+            const pId = Number(e.target.dataset.prodid);
+            const variantIdx = Number(e.target.value);
+            const product = products.find(p => p.id === pId);
+            const variant = product.variants[variantIdx];
+
+            $(`priceDisplay-${pId}`).textContent = `₹${variant.price}`;
+            $(`sizeDisplay-${pId}`).textContent = `${variant.size}`;
+
+            // Update card action button for selected variant
+            const cartItem = cart.find(i => i.id === pId && i.variantIndex === variantIdx);
+            const qty = cartItem ? cartItem.qty : 0;
+            $(`btnContainer-${pId}`).innerHTML = renderCardButtonHtml(pId, variantIdx, qty);
+            attachCardButtonListeners(pId, variantIdx);
+          });
+        });
+
+        // Attach initial card button listeners
+        filtered.forEach(p => attachCardButtonListeners(p.id, 0));
+      }
+
+      function renderCardButtonHtml(productId, variantIndex, qty) {
+        if (qty > 0) {
+          return `
+            <div class="qty-card-control">
+              <button class="qty-card-btn" data-cardminus="${productId}" data-vidx="${variantIndex}">−</button>
+              <span class="qty-card-val">${qty}</span>
+              <button class="qty-card-btn" data-cardplus="${productId}" data-vidx="${variantIndex}">+</button>
+            </div>
+          `;
+        }
+        return `
+          <button class="add-btn" data-cardadd="${productId}" data-vidx="${variantIndex}">
+            + Add
+          </button>
+        `;
+      }
+
+      function attachCardButtonListeners(productId, variantIndex) {
+        const container = $(`btnContainer-${productId}`);
+        if (!container) return;
+
+        const addBtn = container.querySelector("[data-cardadd]");
+        const minusBtn = container.querySelector("[data-cardminus]");
+        const plusBtn = container.querySelector("[data-cardplus]");
+
+        if (addBtn) {
+          addBtn.addEventListener("click", () => addToCart(productId, variantIndex, 1));
+        }
+        if (minusBtn) {
+          minusBtn.addEventListener("click", () => changeCartQuantity(productId, variantIndex, -1));
+        }
+        if (plusBtn) {
+          plusBtn.addEventListener("click", () => changeCartQuantity(productId, variantIndex, 1));
+        }
+      }
+
+      // Cart Functions
+      function addToCart(productId, variantIndex, qty = 1) {
+        const product = products.find(p => p.id === productId);
+        const variant = product.variants[variantIndex];
+        const existing = cart.find(i => i.id === productId && i.variantIndex === variantIndex);
+
+        if (existing) {
+          existing.qty += qty;
+        } else {
+          cart.push({
+            id: productId,
+            variantIndex,
+            name: product.name,
+            image: product.image,
+            size: variant.size,
+            price: variant.price,
+            qty
+          });
+        }
+
+        updateCartUI();
+        showToast(`Added ${product.name}`);
+      }
+
+      function changeCartQuantity(productId, variantIndex, delta) {
+        const item = cart.find(i => i.id === productId && i.variantIndex === variantIndex);
+        if (!item) return;
+
+        item.qty += delta;
+        if (item.qty <= 0) {
+          cart = cart.filter(i => !(i.id === productId && i.variantIndex === variantIndex));
+        }
+
+        updateCartUI();
+      }
+
+      function getCartSubtotal() {
+        return cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+      }
+
+      function getCartTotalCount() {
+        return cart.reduce((sum, i) => sum + i.qty, 0);
+      }
+
+      function updateCartUI() {
+        const totalCount = getCartTotalCount();
+        const subtotal = getCartSubtotal();
+        const discount = isCouponApplied ? Math.round(subtotal * 0.1) : 0;
+        const finalTotal = Math.max(0, subtotal - discount);
+
+        // Update badge and counts
+        const badge = $("cartCount");
+        badge.textContent = totalCount;
+        badge.classList.remove("bounce");
+        void badge.offsetWidth; // trigger reflow
+        if (totalCount > 0) badge.classList.add("bounce");
+
+        $("cartSubtotal").textContent = `₹${subtotal}`;
+        $("cartFinalTotal").textContent = `₹${finalTotal}`;
+        $("mobileTotal").textContent = `₹${finalTotal}`;
+        $("mobileItemCount").textContent = `${totalCount} item${totalCount === 1 ? '' : 's'} in basket`;
+
+        if (isCouponApplied && subtotal > 0) {
+          $("discountRow").style.display = "flex";
+          $("discountVal").textContent = `-₹${discount}`;
+        } else {
+          $("discountRow").style.display = "none";
+        }
+
+        // Update card buttons
+        products.forEach(p => {
+          const select = $(`select-${p.id}`);
+          const currentVariantIdx = select ? Number(select.value) : 0;
+          const cartItem = cart.find(i => i.id === p.id && i.variantIndex === currentVariantIdx);
+          const qty = cartItem ? cartItem.qty : 0;
+          const container = $(`btnContainer-${p.id}`);
+          if (container) {
+            container.innerHTML = renderCardButtonHtml(p.id, currentVariantIdx, qty);
+            attachCardButtonListeners(p.id, currentVariantIdx);
+          }
+        });
+
+        // Update Free Shipping Progress Bar
+        const minOrder = 199;
+        const progressFill = $("shippingProgressBar");
+        const progressText = $("shippingProgressText");
+
+        if (subtotal >= minOrder) {
+          progressFill.style.width = "100%";
+          progressText.innerHTML = `🎉 <strong>Congratulations!</strong> You qualify for FREE Delivery across Ahmedabad.`;
+        } else {
+          const needed = minOrder - subtotal;
+          const pct = Math.min(100, Math.round((subtotal / minOrder) * 100));
+          progressFill.style.width = `${pct}%`;
+          progressText.innerHTML = subtotal === 0
+            ? `Minimum order value for delivery is <strong>₹${minOrder}</strong>.`
+            : `Add <strong>₹${needed}</strong> more to qualify for FREE Delivery!`;
+        }
+
+        // Render Cart Items list inside Drawer
+        if (!cart.length) {
+          $("cartItemsContainer").innerHTML = `
+            <div style="text-align:center; padding: 45px 10px; color: var(--text-muted);">
+              <div style="font-size: 38px; margin-bottom: 12px; color: var(--green-primary);">🧺</div>
+              <h4 style="color:var(--green-deep); margin-bottom: 6px;">Your basket is empty</h4>
+              <p style="font-size: 13px;">Add fresh 100% organic vegetables or family packages to get started.</p>
+            </div>
+          `;
+          return;
+        }
+
+        $("cartItemsContainer").innerHTML = cart.map(item => `
+          <div class="cart-item-row">
+            <img class="cart-item-img" src="${item.image}" alt="${item.name}" />
+            <div class="cart-item-info">
+              <strong>${item.name}</strong>
+              <small>${item.size} · ₹${item.price} each</small>
+              <div class="qty-stepper">
+                <button class="qty-btn" data-drawerctrl="${item.id}" data-drawervar="${item.variantIndex}" data-delta="-1">−</button>
+                <span class="qty-num">${item.qty}</span>
+                <button class="qty-btn" data-drawerctrl="${item.id}" data-drawervar="${item.variantIndex}" data-delta="1">+</button>
+              </div>
+            </div>
+            <div class="cart-item-price">₹${item.price * item.qty}</div>
+          </div>
+        `).join("");
+
+        document.querySelectorAll("[data-drawerctrl]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const pId = Number(btn.dataset.drawerctrl);
+            const vIdx = Number(btn.dataset.drawervar);
+            const delta = Number(btn.dataset.delta);
+            changeCartQuantity(pId, vIdx, delta);
+          });
+        });
+      }
+
+      // Drawer Open/Close
+      function openDrawer() {
+        $("cartDrawer").classList.add("active");
+        $("drawerOverlay").classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeDrawer() {
+        $("cartDrawer").classList.remove("active");
+        $("drawerOverlay").classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      // Toast Notification
+      function showToast(msg) {
+        const toast = $("toastMsg");
+        toast.textContent = msg;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2200);
+      }
+
+      // Time Savings Calculator Logic
+      function updateCalculator() {
+        const meals = Number($("mealFrequency").value);
+        $("mealValDisplay").textContent = `${meals} Meals / Week`;
+        const hours = (meals * 35 / 60).toFixed(1);
+        const waste = (meals * 0.4).toFixed(1);
+        $("hoursSaved").textContent = `${hours} Hrs`;
+        $("wasteAvoided").textContent = `${waste} Kg`;
+      }
+
+      // Apply Coupon Logic
+      function applyCoupon() {
+        const code = $("couponCodeInput").value.trim().toUpperCase();
+        if (code === "TAJA10") {
+          isCouponApplied = true;
+          $("couponAppliedTag").style.display = "block";
+          showToast("Coupon TAJA10 applied! 10% OFF");
+          updateCartUI();
+        } else if (code) {
+          showToast("Invalid Coupon Code. Try TAJA10");
+        }
+      }
+
+      // WhatsApp Checkout
+      function triggerWhatsAppOrder() {
+        saveCustomerInfo();
+
+        if (!cart.length) {
+          const defaultMsg = "Hello Tajatokari! I would like to know more about your 100% organic, chemical-free ready-to-cook vegetables catalog.";
+          window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMsg)}`, "_blank", "noopener,noreferrer");
+          return;
+        }
+
+        const name = $("custName").value.trim();
+        const phone = $("custPhone").value.trim();
+        const address = $("custAddress").value.trim();
+        const landmark = $("custLandmark").value.trim();
+        const slot = $("custSlot").value;
+        const payment = $("custPayment").value;
+        const err = $("formError");
+
+        if (!name || !phone || !address) {
+          err.textContent = "Please enter your Full Name, Mobile Number, and Delivery Address.";
+          err.style.display = "block";
+          openDrawer();
+          return;
+        }
+
+        const digits = phone.replace(/\D/g, "");
+        if (digits.length < 10) {
+          err.textContent = "Please enter a valid 10-digit mobile number.";
+          err.style.display = "block";
+          openDrawer();
+          return;
+        }
+        err.style.display = "none";
+
+        const orderLines = cart.map(item => `• ${item.name} (${item.size}) x ${item.qty} = ₹${item.price * item.qty}`);
+        const subtotal = getCartSubtotal();
+        const discount = isCouponApplied ? Math.round(subtotal * 0.1) : 0;
+        const finalTotal = subtotal - discount;
+
+        const deliveryDetails = [
+          `Name: ${name}`,
+          `Mobile: ${phone}`,
+          `Address: ${address}`,
+          landmark ? `Landmark/Area: ${landmark}` : "",
+          slot ? `Preferred Slot: ${slot}` : "",
+          `Payment Preference: ${payment}`
+        ].filter(Boolean).join("\n");
+
+        const couponText = isCouponApplied ? `\n*Discount (TAJA10): -₹${discount}*` : "";
+
+        const fullMsg = `Hello Tajatokari! I would like to place an order for 100% organic vegetables:\n\n${orderLines.join("\n")}\n\nItems Subtotal: ₹${subtotal}${couponText}\n*Total Payable: ₹${finalTotal}*\n\n*Delivery & Payment Info:*\n${deliveryDetails}\n\nPlease confirm availability and delivery slot. Thank you!`;
+
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMsg)}`, "_blank", "noopener,noreferrer");
+      }
+
+      // Custom Basket State & Functions
+      let targetBasketCount = 4;
+      let targetBasketPrice = 249;
+      let selectedVeggieIds = [];
+
+      function renderCustomBasket() {
+        const individualProds = products.filter(p => p.category !== "Packages & Bundles");
+        
+        $("targetCountDisplay").textContent = targetBasketCount;
+        $("selectedCountDisplay").textContent = selectedVeggieIds.length;
+
+        // Render Veggie Picker
+        $("veggiePickerContainer").innerHTML = individualProds.map(p => {
+          const isSel = selectedVeggieIds.includes(p.id);
+          return `
+            <div class="veggie-picker-item ${isSel ? 'selected' : ''}" data-pickid="${p.id}">
+              <img src="${p.image}" class="veggie-picker-img" alt="${p.name}" />
+              <div class="veggie-picker-info">
+                <strong>${p.name}</strong>
+                <small>250g pack</small>
+              </div>
+              <div class="veggie-check-icon">✓</div>
+            </div>
+          `;
+        }).join("");
+
+        // Attach picker item click listeners
+        document.querySelectorAll("[data-pickid]").forEach(item => {
+          item.addEventListener("click", () => {
+            const id = Number(item.dataset.pickid);
+            if (selectedVeggieIds.includes(id)) {
+              selectedVeggieIds = selectedVeggieIds.filter(v => v !== id);
+            } else {
+              if (selectedVeggieIds.length < targetBasketCount) {
+                selectedVeggieIds.push(id);
+              } else {
+                showToast(`You have reached your limit of ${targetBasketCount} items for this box!`);
+              }
+            }
+            renderCustomBasket();
+          });
+        });
+
+        // Render Selected Chips
+        if (!selectedVeggieIds.length) {
+          $("selectedChipsContainer").innerHTML = `<span style="font-size:12px; opacity:0.8;">No items selected yet. Tap veggies above to add to your custom basket.</span>`;
+          $("addCustomBasketBtn").disabled = true;
+          $("addCustomBasketBtn").textContent = `Add Custom Basket (₹${targetBasketPrice}) →`;
+        } else {
+          $("selectedChipsContainer").innerHTML = selectedVeggieIds.map(id => {
+            const prod = products.find(p => p.id === id);
+            return `<span class="chip-item">🌱 ${prod ? prod.name : 'Veggie'}</span>`;
+          }).join("");
+
+          const isFull = selectedVeggieIds.length === targetBasketCount;
+          $("addCustomBasketBtn").disabled = !isFull;
+          $("addCustomBasketBtn").textContent = isFull 
+            ? `Add Custom Basket (₹${targetBasketPrice}) →` 
+            : `Select ${targetBasketCount - selectedVeggieIds.length} more item(s)`;
+        }
+      }
+
+      // Add Custom Basket to Cart Drawer
+      function addCustomBasketToCart() {
+        if (selectedVeggieIds.length !== targetBasketCount) return;
+
+        const names = selectedVeggieIds.map(id => {
+          const p = products.find(item => item.id === id);
+          return p ? p.name : "";
+        }).join(", ");
+
+        const customItem = {
+          id: 9900 + Date.now(),
+          name: `Custom Organic Basket (${targetBasketCount} Items)`,
+          variantIndex: 0,
+          size: `${targetBasketCount} Custom Veggie Packs`,
+          price: targetBasketPrice,
+          image: "images/mixed_vegetables.jpg",
+          qty: 1
+        };
+
+        const existing = cart.find(i => i.name === customItem.name);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push(customItem);
+        }
+
+        updateCartUI();
+        openDrawer();
+        showToast(`🎉 Custom ${targetBasketCount}-Veggie Basket added to your basket!`);
+      }
+
+      // Recipe Bundles Add to Cart
+      const recipesMap = {
+        rec1: { name: "10-Min Organic Pav Bhaji Bundle", price: 189, ids: [1, 2, 3, 10] },
+        rec2: { name: "10-Min Paneer Masala Bundle", price: 249, ids: [9, 10, 2] },
+        rec3: { name: "10-Min Veg Stir-Fry Bundle", price: 169, ids: [4, 5, 6, 3] },
+        rec4: { name: "10-Min Gujarati Mix Veg Bundle", price: 199, ids: [7, 1, 10] }
+      };
+
+      function addRecipeBundleToCart(recId) {
+        const recipe = recipesMap[recId];
+        if (!recipe) return;
+
+        recipe.ids.forEach(pId => {
+          addToCart(pId, 0, 1);
+        });
+
+        openDrawer();
+        showToast(`🍳 ${recipe.name} ingredients added to basket!`);
+      }
+
+      // Event Listeners
+      $("openCartBtn").addEventListener("click", openDrawer);
+      $("closeCartBtn").addEventListener("click", closeDrawer);
+      $("drawerOverlay").addEventListener("click", closeDrawer);
+      $("mobileCartTrigger").addEventListener("click", openDrawer);
+      $("mobileWaTrigger").addEventListener("click", triggerWhatsAppOrder);
+      $("checkoutBtn").addEventListener("click", triggerWhatsAppOrder);
+      $("directWhatsappBtn").addEventListener("click", triggerWhatsAppOrder);
+      $("floatingWaBtn").addEventListener("click", triggerWhatsAppOrder);
+      $("applyCouponBtn").addEventListener("click", applyCoupon);
+
+      // Custom Basket Size Picker Listeners
+      document.querySelectorAll("[data-size]").forEach(card => {
+        card.addEventListener("click", () => {
+          document.querySelectorAll("[data-size]").forEach(c => c.classList.remove("active"));
+          card.classList.add("active");
+          targetBasketCount = Number(card.dataset.size);
+          targetBasketPrice = Number(card.dataset.price);
+          if (selectedVeggieIds.length > targetBasketCount) {
+            selectedVeggieIds = selectedVeggieIds.slice(0, targetBasketCount);
+          }
+          renderCustomBasket();
+        });
+      });
+
+      $("addCustomBasketBtn").addEventListener("click", addCustomBasketToCart);
+
+      // Recipe Buttons Listeners
+      document.querySelectorAll("[data-recipeid]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          addRecipeBundleToCart(btn.dataset.recipeid);
+        });
+      });
+
+      // Calculator Listener
+      $("mealFrequency").addEventListener("input", updateCalculator);
+
+      // Package Card Quick Add Listeners
+      document.querySelectorAll("[data-pkgid]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const pkgId = Number(btn.dataset.pkgid);
+          addToCart(pkgId, 0, 1);
+          openDrawer();
+        });
+      });
+
+      // FAQ Accordion Listeners
+      document.querySelectorAll(".faq-question").forEach(q => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
+          const isActive = item.classList.contains("active");
+          document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("active"));
+          if (!isActive) item.classList.add("active");
+        });
+      });
+
+      // Live Search
+      $("searchInput").addEventListener("input", renderProducts);
+
+      // Save form on input changes
+      ["custName", "custPhone", "custAddress", "custLandmark", "custSlot", "custPayment"].forEach(id => {
+        $(id).addEventListener("change", saveCustomerInfo);
+      });
+
+      // Initialization
+      loadSavedCustomerInfo();
+      renderCategories();
+      renderProducts();
+      renderCustomBasket();
+      updateCartUI();
+      updateCalculator();
+    })();
+  </script>
+</body>
+</html>
